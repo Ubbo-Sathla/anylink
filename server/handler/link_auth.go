@@ -89,6 +89,7 @@ func LinkAuth(w http.ResponseWriter, r *http.Request) {
 	sess.MacAddr = strings.ToLower(cr.MacAddressList.MacAddress)
 	sess.UniqueIdGlobal = cr.DeviceId.UniqueIdGlobal
 	other := &dbdata.SettingOther{}
+	fmt.Printf("other: %v", other)
 	_ = dbdata.SettingGet(other)
 	rd := RequestData{SessionId: sess.Sid, SessionToken: sess.Sid + "@" + sess.Token,
 		Banner: other.Banner, ProfileHash: profileHash}
