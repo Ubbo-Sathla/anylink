@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  anylink:
+    image: bjdgyc/anylink:self-signed-tls
+    container_name: anylink
+    restart: always
+    network_mode: "host"
+    privileged: true
+    environment:
+      - IPV4_CIDR=192.168.10.0/24
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/opt/anylink-conf:/app/conf"
