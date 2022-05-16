@@ -145,6 +145,7 @@ var auth_request = `<?xml version="1.0" encoding="UTF-8"?>
         <aggauth-handle>168179266</aggauth-handle>
         <config-hash>1595829378234</config-hash>
         <auth-method>multiple-cert</auth-method>
+        <auth-method>single-sign-on</auth-method>
         <auth-method>single-sign-on-v2</auth-method>
     </opaque>
     <auth id="main">
