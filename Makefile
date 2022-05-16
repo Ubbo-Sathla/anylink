@@ -15,5 +15,6 @@ build: pre_build
 
 pre_start:
 	echo start
+
 start: pre_start
 	docker-compose up -d
