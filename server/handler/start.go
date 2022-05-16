@@ -5,10 +5,10 @@ import (
 	"encoding/hex"
 	"os"
 
-	"github.com/bjdgyc/anylink/admin"
-	"github.com/bjdgyc/anylink/base"
-	"github.com/bjdgyc/anylink/dbdata"
-	"github.com/bjdgyc/anylink/sessdata"
+	"github.com/Ubbo-Sathla/anylink/admin"
+	"github.com/Ubbo-Sathla/anylink/base"
+	"github.com/Ubbo-Sathla/anylink/dbdata"
+	"github.com/Ubbo-Sathla/anylink/sessdata"
 )
 
 func Start() {

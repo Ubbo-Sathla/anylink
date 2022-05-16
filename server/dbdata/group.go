@@ -6,7 +6,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/bjdgyc/anylink/base"
+	"github.com/Ubbo-Sathla/anylink/base"
 )
 
 const (

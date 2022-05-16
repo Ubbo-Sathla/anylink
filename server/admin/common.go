@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/bjdgyc/anylink/base"
-	"github.com/bjdgyc/anylink/dbdata"
+	"github.com/Ubbo-Sathla/anylink/base"
+	"github.com/Ubbo-Sathla/anylink/dbdata"
 	"github.com/golang-jwt/jwt/v4"
 	mail "github.com/xhit/go-simple-mail/v2"
 	// "github.com/mojocn/base64Captcha"

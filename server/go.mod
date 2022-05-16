@@ -1,4 +1,4 @@
-module github.com/bjdgyc/anylink
+module github.com/Ubbo-Sathla/anylink
 
 go 1.16
 

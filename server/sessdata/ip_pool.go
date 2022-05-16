@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/bjdgyc/anylink/base"
-	"github.com/bjdgyc/anylink/dbdata"
-	"github.com/bjdgyc/anylink/pkg/utils"
+	"github.com/Ubbo-Sathla/anylink/base"
+	"github.com/Ubbo-Sathla/anylink/dbdata"
+	"github.com/Ubbo-Sathla/anylink/pkg/utils"
 )
 
 var (

@@ -9,8 +9,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/bjdgyc/anylink/base"
-	"github.com/bjdgyc/anylink/pkg/proxyproto"
+	"github.com/Ubbo-Sathla/anylink/base"
+	"github.com/Ubbo-Sathla/anylink/pkg/proxyproto"
 	"github.com/gorilla/mux"
 )
 

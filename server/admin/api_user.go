@@ -13,9 +13,9 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/bjdgyc/anylink/base"
-	"github.com/bjdgyc/anylink/dbdata"
-	"github.com/bjdgyc/anylink/sessdata"
+	"github.com/Ubbo-Sathla/anylink/base"
+	"github.com/Ubbo-Sathla/anylink/dbdata"
+	"github.com/Ubbo-Sathla/anylink/sessdata"
 	"github.com/skip2/go-qrcode"
 )
 

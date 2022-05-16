@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/bjdgyc/anylink/dbdata"
+	"github.com/Ubbo-Sathla/anylink/dbdata"
 )
 
 func setOtherGet(data interface{}, w http.ResponseWriter) {

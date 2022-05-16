@@ -1,5 +1,6 @@
 // AnyLink 是一个企业级远程办公vpn软件，可以支持多人同时在线使用。
 
+//go:build !windows
 // +build !windows
 
 package main
@@ -10,9 +11,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/bjdgyc/anylink/admin"
-	"github.com/bjdgyc/anylink/base"
-	"github.com/bjdgyc/anylink/handler"
+	"github.com/Ubbo-Sathla/anylink/admin"
+	"github.com/Ubbo-Sathla/anylink/base"
+	"github.com/Ubbo-Sathla/anylink/handler"
 )
 
 //go:embed ui

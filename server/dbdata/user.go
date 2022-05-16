@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/bjdgyc/anylink/pkg/utils"
+	"github.com/Ubbo-Sathla/anylink/pkg/utils"
 	"github.com/xlzd/gotp"
 )
 

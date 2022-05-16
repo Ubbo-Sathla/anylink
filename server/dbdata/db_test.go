@@ -5,7 +5,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/bjdgyc/anylink/base"
+	"github.com/Ubbo-Sathla/anylink/base"
 	"github.com/stretchr/testify/assert"
 )
 
