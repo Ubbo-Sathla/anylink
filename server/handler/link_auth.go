@@ -6,6 +6,7 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
+	"net/http/httputil"
 	"strings"
 	"text/template"
 
@@ -17,6 +18,11 @@ import (
 var profileHash = ""
 
 func LinkAuth(w http.ResponseWriter, r *http.Request) {
+
+	fmt.Println("LinkAuth Post", r.RemoteAddr)
+	hu, _ := httputil.DumpRequest(r, true)
+	fmt.Println("DumpHome: ", string(hu))
+
 	// 判断anyconnect客户端
 	userAgent := strings.ToLower(r.UserAgent())
 	xAggregateAuth := r.Header.Get("X-Aggregate-Auth")

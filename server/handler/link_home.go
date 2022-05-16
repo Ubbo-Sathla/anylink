@@ -10,7 +10,7 @@ import (
 )
 
 func LinkHome(w http.ResponseWriter, r *http.Request) {
-	fmt.Println(r.RemoteAddr)
+	fmt.Println("LinkHome Get", r.RemoteAddr)
 	hu, _ := httputil.DumpRequest(r, true)
 	fmt.Println("DumpHome: ", string(hu))
 
