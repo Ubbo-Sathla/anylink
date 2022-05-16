@@ -4,6 +4,9 @@ services:
     image: bjdgyc/anylink:self-signed-tls
     container_name: anylink
     restart: always
+    build:
+      network: host
+
     network_mode: "host"
     privileged: true
     environment:
