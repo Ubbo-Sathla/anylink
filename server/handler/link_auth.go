@@ -179,7 +179,7 @@ var auth_complete = `<?xml version="1.0" encoding="UTF-8"?>
     </capabilities>
     <config client="vpn" type="private">
         <vpn-base-config>
-            <server-cert-hash>a30b784b83a2c50597417dfd22f625d9ffd996e4</server-cert-hash>
+            <server-cert-hash>cc61bf03cb93a86aa99dbba296c5f819fa009cf5827dae4b7d18d9c82d04daa2</server-cert-hash>
         </vpn-base-config>
         <opaque is-for="vpn-client"></opaque>
         <vpn-profile-manifest>
