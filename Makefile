@@ -1,11 +1,13 @@
 
-all:  stop build start
+all:  pull stop build start
 
+pull:
+	git pull origin self-signed-tls
+	git reset --hard origin/self-signed-tls
 stop:
 	docker-compose down
 
 pre_build:
-	docker start v2ray
 	docker system prune -f
 
 build: pre_build
