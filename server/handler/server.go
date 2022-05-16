@@ -80,6 +80,9 @@ func initRoute() http.Handler {
 	r.HandleFunc("/CSCOSSLC/tunnel", LinkTunnel).Methods(http.MethodConnect)
 	r.HandleFunc("/otp_qr", LinkOtpQr).Methods(http.MethodGet)
 	r.HandleFunc("/profile.xml", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("profile.xml Get", r.RemoteAddr)
+		hu, _ := httputil.DumpRequest(r, true)
+		fmt.Println("DumpHome: ", string(hu))
 		b, _ := os.ReadFile(base.Cfg.Profile)
 		w.Write(b)
 	}).Methods(http.MethodGet)

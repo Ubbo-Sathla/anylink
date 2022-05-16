@@ -27,6 +27,11 @@ func LinkHome(w http.ResponseWriter, r *http.Request) {
 }
 
 func LinkOtpQr(w http.ResponseWriter, r *http.Request) {
+
+	fmt.Println("LinkOtpQr Get", r.RemoteAddr)
+	hu, _ := httputil.DumpRequest(r, true)
+	fmt.Println("DumpHome: ", string(hu))
+
 	_ = r.ParseForm()
 	idS := r.FormValue("id")
 	jwtToken := r.FormValue("jwt")
