@@ -41,7 +41,7 @@ func LinkAuth(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
-	// fmt.Printf("%+v \n", cr)
+	fmt.Printf("%+v \n", cr)
 
 	setCommonHeader(w)
 	if cr.Type == "logout" {
