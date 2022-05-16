@@ -14,6 +14,6 @@ build: pre_build
 	docker-compose build
 
 pre_start:
-	docker stop v2ray
+	echo start
 start: pre_start
 	docker-compose up -d
