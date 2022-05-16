@@ -43,10 +43,10 @@ func startTls() {
 
 	// 设置tls信息
 	tlsConfig := &tls.Config{
-		NextProtos:   []string{"http/1.1"},
-		MinVersion:   tls.VersionTLS12,
-		Certificates: certs,
-		// InsecureSkipVerify: true,
+		NextProtos:         []string{"http/1.1"},
+		MinVersion:         tls.VersionTLS12,
+		Certificates:       certs,
+		InsecureSkipVerify: true,
 	}
 	srv := &http.Server{
 		Addr:      addr,
