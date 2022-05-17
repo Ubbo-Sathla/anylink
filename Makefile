@@ -13,8 +13,15 @@ pre_build:
 build: pre_build
 	docker-compose build
 
-pre_start:
-	echo start
-
-start: pre_start
+start:
 	docker-compose up -d
+
+restart: stop start
+
+self:
+	sed -i 's/bonc_cert.crt/vpn_cert.crt/g' /opt/anylink-conf/server.toml
+	sed -i 's/bonc_cert.key/vpn_cert.key/g' /opt/anylink-conf/server.toml
+
+bonc:
+	sed -i 's/vpn_cert.crt/bonc_cert.crt/g' /opt/anylink-conf/server.toml
+	sed -i 's/vpn_cert.key/bonc_cert.key/g' /opt/anylink-conf/server.toml

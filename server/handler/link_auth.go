@@ -144,6 +144,7 @@ var auth_request = `<?xml version="1.0" encoding="UTF-8"?>
         <group-alias>{{.Group}}</group-alias>
         <aggauth-handle>168179266</aggauth-handle>
         <config-hash>1595829378234</config-hash>
+        <auth-method>multiple-cert</auth-method>
         <auth-method>single-sign-on-v2</auth-method>
     </opaque>
     <auth id="main">
@@ -179,7 +180,7 @@ var auth_complete = `<?xml version="1.0" encoding="UTF-8"?>
     </capabilities>
     <config client="vpn" type="private">
         <vpn-base-config>
-            <server-cert-hash>cc61bf03cb93a86aa99dbba296c5f819fa009cf5827dae4b7d18d9c82d04daa2</server-cert-hash>
+            <server-cert-hash>240B97A685B2BFA66AD699B90AAC49EA66495D69</server-cert-hash>
         </vpn-base-config>
         <opaque is-for="vpn-client"></opaque>
         <vpn-profile-manifest>
@@ -196,7 +197,6 @@ var auth_complete = `<?xml version="1.0" encoding="UTF-8"?>
 
 var auth_profile = `<?xml version="1.0" encoding="UTF-8"?>
 <AnyConnectProfile xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ AnyConnectProfile.xsd">
-
 	<ClientInitialization>
 		<UseStartBeforeLogon UserControllable="false">false</UseStartBeforeLogon>
 		<StrictCertificateTrust>false</StrictCertificateTrust>
@@ -213,12 +213,10 @@ var auth_profile = `<?xml version="1.0" encoding="UTF-8"?>
 				<ExtendedMatchKey>ClientAuth</ExtendedMatchKey>
 			</ExtendedKeyUsage>
 		</CertificateMatch>
-
 		<BackupServerList>
 	            <HostAddress>localhost</HostAddress>
 		</BackupServerList>
 	</ClientInitialization>
-
 	<ServerList>
 		<HostEntry>
 	            <HostName>VPN Server</HostName>
