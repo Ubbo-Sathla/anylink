@@ -185,9 +185,7 @@ var auth_complete = `<?xml version="1.0" encoding="UTF-8"?>
         <message id="0" param1="" param2=""></message>
     </auth>
     <config client="vpn" type="private">
-        <vpn-base-config>
-            <server-cert-hash>240B97A685B2BFA66AD699B90AAC49EA66495D69</server-cert-hash>
-        </vpn-base-config>
+
         <opaque is-for="vpn-client"></opaque>
         <vpn-profile-manifest>
             <vpn rev="1.0">
