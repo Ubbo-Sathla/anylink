@@ -2,9 +2,7 @@ package handler
 
 import (
 	"crypto/tls"
-	"crypto/x509"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net"
 	"net/http"
@@ -38,15 +36,6 @@ func startTls() {
 	//	// 使用自定义证书
 	//	certs[0], err = tls.LoadX509KeyPair(certFile, keyFile)
 	// }
-	caBytes, err := ioutil.ReadFile("/app/conf/ca.crt")
-	if err != nil {
-		panic("Unable to read /app/conf/ca.crt")
-	}
-	caPool := x509.NewCertPool()
-	ok := caPool.AppendCertsFromPEM(caBytes)
-	if !ok {
-		panic("failed to parse root certificate")
-	}
 
 	certs[0], err = tls.LoadX509KeyPair(certFile, keyFile)
 	if err != nil {
@@ -59,7 +48,6 @@ func startTls() {
 		MinVersion:         tls.VersionTLS12,
 		Certificates:       certs,
 		ClientAuth:         tls.NoClientCert,
-		RootCAs:            caPool,
 		InsecureSkipVerify: true,
 	}
 	fmt.Printf("%#v\n", tlsConfig)
