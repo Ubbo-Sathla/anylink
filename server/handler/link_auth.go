@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"bytes"
 	"encoding/xml"
 	"fmt"
 	"io"
@@ -95,10 +96,10 @@ func LinkAuth(w http.ResponseWriter, r *http.Request) {
 	sess.MacAddr = strings.ToLower(cr.MacAddressList.MacAddress)
 	sess.UniqueIdGlobal = cr.DeviceId.UniqueIdGlobal
 	other := &dbdata.SettingOther{}
-	fmt.Printf("other: %v", other)
 	_ = dbdata.SettingGet(other)
 	rd := RequestData{SessionId: sess.Sid, SessionToken: sess.Sid + "@" + sess.Token,
 		Banner: other.Banner, ProfileHash: profileHash}
+	fmt.Printf("other: %v", other)
 	w.WriteHeader(http.StatusOK)
 	tplRequest(tpl_complete, w, rd)
 	base.Debug("login", cr.Auth.Username)
@@ -121,7 +122,14 @@ func tplRequest(typ int, w io.Writer, data RequestData) {
 		data.Banner = strings.ReplaceAll(data.Banner, "\n", "&#x0A;")
 	}
 	t, _ := template.New("auth_complete").Parse(auth_complete)
-	_ = t.Execute(w, data)
+	buf := new(bytes.Buffer)
+
+	err := t.Execute(buf, data)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(buf.String())
+	w.Write(buf.Bytes())
 }
 
 // 设置输出信息
