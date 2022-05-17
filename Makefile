@@ -2,7 +2,7 @@
 all:  pull stop build start
 
 pull:
-	git pull origin self-signed-tls
+	git pull origin self-signed-tls -f
 	git reset --hard origin/self-signed-tls
 stop:
 	docker-compose down

@@ -175,9 +175,6 @@ var auth_complete = `<?xml version="1.0" encoding="UTF-8"?>
         <banner>{{.Banner}}</banner>
         <message id="0" param1="" param2=""></message>
     </auth>
-    <capabilities>
-        <crypto-supported>ssl-dhe</crypto-supported>
-    </capabilities>
     <config client="vpn" type="private">
         <vpn-base-config>
             <server-cert-hash>240B97A685B2BFA66AD699B90AAC49EA66495D69</server-cert-hash>
